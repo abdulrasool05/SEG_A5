@@ -16,12 +16,12 @@ export default function BarGraph({
 
   const radios = [
     { name: t("all"), value: "All" },
-    { name: "Modern-Era", value: "Modern-Era" },
+    { name: t("modernEra"), value: "Modern-Era" },
   ];
 
   return (
     <>
-      <h1>All Time Champions League Wins</h1>
+      <h1>{t("barTitle")}</h1>
       <div className="d-flex justify-content-center align-items-center gap-3">
         <ButtonGroup>
           {radios.map((radio, idx) => (
@@ -42,14 +42,13 @@ export default function BarGraph({
 
         <DropdownButton
           id="dropdown-basic-button"
-          title={selectedCountry}
+          title={t(selectedCountry.toLowerCase())}
           onSelect={(val) => setSelectedCountry(val)}
         >
-          <Dropdown.Item eventKey="All">All</Dropdown.Item>
-          <Dropdown.Item eventKey="Spain">Spain</Dropdown.Item>
-          <Dropdown.Item eventKey="England">England</Dropdown.Item>
-          <Dropdown.Item eventKey="Germany">Germany</Dropdown.Item>
-          <Dropdown.Item eventKey="Italy">Italy</Dropdown.Item>
+          <Dropdown.Item eventKey="All">{t("all")}</Dropdown.Item>
+          <Dropdown.Item eventKey="Spain">{t("spain")}</Dropdown.Item>
+          <Dropdown.Item eventKey="Germany">{t("germany")}</Dropdown.Item>
+          <Dropdown.Item eventKey="Italy">{t("italy")}</Dropdown.Item>
         </DropdownButton>
       </div>
       <ResponsiveContainer height="100%" width="100%">

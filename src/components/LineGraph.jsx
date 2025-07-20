@@ -9,6 +9,7 @@ import {
 } from "recharts";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
+import { useTranslation } from "react-i18next";
 
 export default function LineGraph({ data, yearRange, setYearRange }) {
   const radios = [
@@ -16,6 +17,8 @@ export default function LineGraph({ data, yearRange, setYearRange }) {
     { name: "2016-2020", value: { start: 2016, end: 2020 } },
     { name: "2016-2025", value: { start: 2016, end: 2025 } },
   ];
+
+  const { t } = useTranslation();
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -29,13 +32,13 @@ export default function LineGraph({ data, yearRange, setYearRange }) {
           }}
         >
           <p>
-            <strong>Year:</strong> {label}
+            <strong>{t("year")}:</strong> {label}
           </p>
           <p>
-            <strong>Goals:</strong> {data.goals}
+            <strong>{t("goals")}:</strong> {data.goals}
           </p>
           <p>
-            <strong>Player:</strong> {data.player}
+            <strong>{t("player")}:</strong> {data.player}
           </p>
         </div>
       );
@@ -45,7 +48,7 @@ export default function LineGraph({ data, yearRange, setYearRange }) {
 
   return (
     <>
-      <h1>Champions League Top Scorers</h1>
+      <h1>{t("lineTitle")}</h1>
       <ButtonGroup>
         {radios.map((radio, idx) => (
           <ToggleButton

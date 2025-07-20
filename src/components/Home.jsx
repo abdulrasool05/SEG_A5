@@ -4,6 +4,8 @@ import LineGraph from "./LineGraph";
 import barGraphData from "../barGraphData";
 import lineGraphData from "../lineGraphData";
 import { useTranslation } from "react-i18next";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
 
 import { useState } from "react";
 
@@ -15,12 +17,6 @@ export default function Home() {
 
   const [language, setLanguage] = useState(i18n.language || "en");
 
-  const toggleLanguage = () => {
-    const newLang = language === "en" ? "fr" : "en";
-    i18n.changeLanguage(newLang);
-    setLanguage(newLang);
-  };
-
   const filteredGraphData = barGraphData.filter((team) =>
     selectedCountry === "All" ? true : team.country === selectedCountry
   );
@@ -31,9 +27,37 @@ export default function Home() {
 
   return (
     <>
-      <button onClick={toggleLanguage}>
-        {language === "en" ? "Français" : "English"}
-      </button>
+      <ButtonGroup>
+        <ToggleButton
+          id="toggle1"
+          type="radio"
+          variant="outline-primary"
+          name="language"
+          value="en"
+          checked={language === "en"}
+          onChange={() => {
+            i18n.changeLanguage("en");
+            setLanguage("en");
+          }}
+        >
+          English
+        </ToggleButton>
+
+        <ToggleButton
+          id="toggle2"
+          type="radio"
+          variant="outline-primary"
+          name="language"
+          value="fr"
+          checked={language === "fr"}
+          onChange={() => {
+            i18n.changeLanguage("fr");
+            setLanguage("fr");
+          }}
+        >
+          Français
+        </ToggleButton>
+      </ButtonGroup>
       <div style={{ width: "100%", height: "500px", marginBottom: "13rem" }}>
         <BarGraph
           data={filteredGraphData}
