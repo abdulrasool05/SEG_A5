@@ -15,7 +15,7 @@ export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState("All");
   const [era, setEra] = useState("All");
   const [yearRange, setYearRange] = useState({ start: 2016, end: 2025 });
-  const { i18n, t } = useTranslation(); // <- gives access to the i18n instance
+  const { i18n, t } = useTranslation();
 
   const [language, setLanguage] = useState(i18n.language || "en");
 
