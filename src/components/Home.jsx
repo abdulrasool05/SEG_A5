@@ -31,10 +31,7 @@ export default function Home() {
     <>
       <Navbar className=" navBar">
         <Container className="d-flex justify-content-between align-items-center">
-          <Navbar.Brand
-            href="#home"
-            className="d-flex align-items-center gap-2 navText"
-          >
+          <Navbar.Brand className="d-flex align-items-center gap-2 navText">
             <img
               alt=""
               src="/images/logo1.png"
