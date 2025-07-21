@@ -75,6 +75,7 @@ export default function BarGraph({
           <Dropdown.Item eventKey="Spain">{t("spain")}</Dropdown.Item>
           <Dropdown.Item eventKey="Germany">{t("germany")}</Dropdown.Item>
           <Dropdown.Item eventKey="Italy">{t("italy")}</Dropdown.Item>
+          <Dropdown.Item eventKey="England">{t("england")}</Dropdown.Item>
         </DropdownButton>
       </div>
       <ResponsiveContainer height="100%" width="100%">
