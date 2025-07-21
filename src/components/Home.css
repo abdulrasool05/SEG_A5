@@ -1,0 +1,64 @@
+body{
+    background-color: 	#181818 !important;
+}
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  padding: 3rem;
+}
+
+.graph-item {
+  flex: 1 1 45%;
+  min-width: 300px;
+  height: 500px;
+}
+
+.languageToggle{
+    margin-right: 3rem !important;
+}
+
+.navText{
+    font-family: Sora !important;
+    font-weight: 500;
+    font-size: 25px !important;
+    color:#e0e0e0 !important;
+}
+
+.navBar{
+    background-color: #252525 !important
+}
+
+.custom-toggle-group {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.custom-toggle-btn {
+  background-color: #252525 !important;
+  color: #f0f0f0 !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-toggle-btn:hover {
+  background-color: #2e2e2e !important;
+  border-color: #1abc9c !important;
+  color: #1abc9c !important;
+}
+
+.custom-toggle-btn.active {
+  background-color: #1abc9c !important;
+  color: #121212;
+  font-weight: bold;
+}
+
+.navTitle{
+    margin-left: 5px;
+}

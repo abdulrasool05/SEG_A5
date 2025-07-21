@@ -7,7 +7,7 @@ const barGraphData = [
     country: "Spain",
   },
   {
-    team: "FC Barcelona",
+    team: "Barcelona",
     wins: 5,
     modernEraWins: 4,
     country: "Spain",
@@ -43,7 +43,7 @@ const barGraphData = [
     country: "Italy",
   },
   {
-    team: "Manchester City",
+    team: "Man City",
     wins: 1,
     modernEraWins: 1,
     country: "England",
